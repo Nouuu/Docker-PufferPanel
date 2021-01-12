@@ -15,6 +15,8 @@ RUN apt-get install -y openjdk-8-jdk-headless
 COPY ./pufferpanel /pufferpanel
 COPY ./pufferpanel.db /etc/pufferpanel/pufferpanel.db
 
+RUN chmod +x /pufferpanel/pufferpanel
+
 EXPOSE 8080 5657 25565
 VOLUME /etc/pufferpanel
 VOLUME /servers_data
